@@ -2,10 +2,11 @@ import string
 import os
 
 class Hangman:
+
     def __init__(self):
         self.word = self.get_word_to_guess()
         self.guess_state = list('*' * len(self.word))
-        self.guesses_remaining = 10
+        self.guesses_remaining = len(self.guy)
         self.letters_not_guessed = list(string.ascii_lowercase)
 
     def get_word_to_guess(self):
@@ -76,4 +77,3 @@ class Hangman:
         
         self.display_game_result()
         
-       

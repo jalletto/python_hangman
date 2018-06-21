@@ -85,17 +85,3 @@ class Hangman:
         
         self.display_game_result()
         
-# import sys 
-# all_guy = [' ___\n    |\n    o\n    |\n',' ___\n    |\n    o\n    |\n     \\',' ___\n    |\n    o\n    |\n   / \\',' ___\n    |\n    o/\n    |\n   / \\',' ___\n    |\n   \o/\n    |\n   / \\',' ___\n    |\n    o\n   /|\\\n   / \\']
-# guy = [' ___\n','    |\n','    o\n','   /|\\\n','   / \\']
-
-# dancing = [' ___\n    |\n    o\n   |\\\n   / \\']
-# def test(guy):
-#     for scene in guy:
-#         sys.stdout.write(scene)
-# test(guy)
-# self.guy
-# self.state = get_state()
-# get_state 
-    # self.guy.shif
-    # print(self.guy[0])

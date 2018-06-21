@@ -58,8 +58,8 @@ class Hangman:
         print('HANGMAN')
         print('-------')
         self.print_guy()
-        print("\nYour guess so far: " + self.get_guess_state().upper())
-        print('Number of guesses remaining: ' + str(self.guesses_remaining))
+        # print("\nYour guess so far: " + self.get_guess_state().upper())
+        print('\nNumber of guesses remaining: ' + str(self.guesses_remaining))
         print("Letters you haven't guessed yet: " + self.get_letters_not_guessed().upper() + '\n')
 
     def let_user_guess(self):
@@ -72,6 +72,7 @@ class Hangman:
             os.system('clear')
 
     def display_game_result(self):
+        self.print_guy()
         if self.player_wins():
             print(f"You guessed {self.word.upper()} correctly!")
         else:

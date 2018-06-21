@@ -59,8 +59,8 @@ class Hangman:
         print('HANGMAN')
         print('-------')
         self.print_guy()
-        print("\n\nYour guess so far: " + self.get_guess_state().upper())
-        print("Letters you haven't guessed yet: " + self.get_letters_not_guessed().upper() + '\n')
+        print("\n\n" + self.get_guess_state().upper() + "\n")
+        print(self.get_letters_not_guessed().upper() + '\n')
 
     def let_user_guess(self):
         user_guess = input("Enter a letter to guess:\n" ).lower()

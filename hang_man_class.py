@@ -1,7 +1,10 @@
 import string 
+import sys
 import os
 
 class Hangman:
+
+    guy = [' ___\n','    |\n','    o\n','   /','|','\\\n','   /',' \\\n\n']
 
     def __init__(self):
         self.word = self.get_word_to_guess()
@@ -47,11 +50,15 @@ class Hangman:
     
     def is_game_over(self):
         return self.player_wins() or self.player_out_of_guesses()
+
+    def print_guy(self):
+        for i in range(0, len(self.guy) - self.guesses_remaining): sys.stdout.write(self.guy[i])
     
     def print_game_status(self):
-        print('PYTHON HANGMAN')
-        print('---------------')
-        print("Your guess so far: " + self.get_guess_state().upper())
+        print('HANGMAN')
+        print('-------')
+        self.print_guy()
+        print("\nYour guess so far: " + self.get_guess_state().upper())
         print('Number of guesses remaining: ' + str(self.guesses_remaining))
         print("Letters you haven't guessed yet: " + self.get_letters_not_guessed().upper() + '\n')
 
@@ -77,3 +84,17 @@ class Hangman:
         
         self.display_game_result()
         
+# import sys 
+# all_guy = [' ___\n    |\n    o\n    |\n',' ___\n    |\n    o\n    |\n     \\',' ___\n    |\n    o\n    |\n   / \\',' ___\n    |\n    o/\n    |\n   / \\',' ___\n    |\n   \o/\n    |\n   / \\',' ___\n    |\n    o\n   /|\\\n   / \\']
+# guy = [' ___\n','    |\n','    o\n','   /|\\\n','   / \\']
+
+# dancing = [' ___\n    |\n    o\n   |\\\n   / \\']
+# def test(guy):
+#     for scene in guy:
+#         sys.stdout.write(scene)
+# test(guy)
+# self.guy
+# self.state = get_state()
+# get_state 
+    # self.guy.shif
+    # print(self.guy[0])

@@ -77,6 +77,13 @@ class Hangman:
             print(f"You guessed {self.word.upper()} correctly!")
         else:
             print(f"You are out of guesses and have failed to guess the word {self.word.upper()}")
+
+    def ask_to_replay(self):
+        replay = input("\nEnter Y to play again or Q to exit\n" ).lower()
+        if replay == 'y':
+            os.system('clear')
+            Hangman().play()
+
         
     def play(self):
         while self.is_game_over() == False:
@@ -84,4 +91,5 @@ class Hangman:
             self.let_user_guess()
         
         self.display_game_result()
+        self.ask_to_replay()
         

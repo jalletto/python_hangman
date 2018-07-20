@@ -1,4 +1,4 @@
-from hang_man_class import Hangman
+from game import Hangman
 
 Hangman().play()
 

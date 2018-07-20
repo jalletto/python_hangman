@@ -64,7 +64,10 @@ class Hangman:
 
     def let_user_guess(self):
         user_guess = input("Enter a letter to guess:\n" ).lower()
-        if self.letter_is_already_guessed(user_guess):
+        if len(user_guess) > 1:
+            os.system('clear')
+            print(f"You can only enter one letter at a time.")
+        elif self.letter_is_already_guessed(user_guess):
             os.system('clear')
             print(f"You already guessed {user_guess} !!!\nPick a different letter.\n")
         else:
